@@ -1,0 +1,24 @@
+{
+  "name": "simple-template-js",
+  "version": "0.0.1",
+  "main": "./simple-template.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "description": "Minimal Javascript templating",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snoguchi/simple-template.js.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "snoguchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snoguchi/simple-template.js/issues"
+  }
+}

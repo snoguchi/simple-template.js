@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript" src="../simple-template.js"></script>
+<style type="text/css">
+textarea { display:block; width:100%; height:100px; }
+</style>
+</head>
+<body>
+
+<button id="run">Run Test</button>
+
+<h3>template</h3>
+<textarea id="template">
+<ul>
+<% data.forEach(function(i) { %>
+<li><%=i%></li>
+<% }); %>
+</ul>
+</textarea>
+
+<h3>data</h3>
+<textarea id="data">
+["sloth", "bear", "monkey"]
+</textarea>
+
+<h3>renderer</h3>
+<textarea id="renderer">
+</textarea>
+
+<h3>result</h3>
+<textarea id="result">
+</textarea>
+
+<script type="text/javascript">
+function $(id) { return document.getElementById(id); }
+
+$('run').addEventListener('click', function() {
+  var renderer = compileTemplate($('template').value);
+  $('renderer').value = renderer.toString();
+  var data = JSON.parse($('data').value);
+  $('result').value = renderer(data);
+});
+</script>
+
+</body>
+</html>
