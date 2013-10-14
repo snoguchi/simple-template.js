@@ -4,7 +4,6 @@ Minimal Javascript templating.
 
 Example
 -------
-
 ```javascript
 // uncomment the below line if use in node.js
 // var compileTemplate = require('simple-template-js');
@@ -15,19 +14,10 @@ var precompiledTemplate = compileTemplate(text);
 var result = precompiledTemplate(data);
 ```
 
-
 Setup
 -----
-node.js
-
 ```
-npm install simple-template
-```
-
-browser
-
-```html
-<script type="text/javascript" src="simple-template.js"></script>
+npm install simple-template-js
 ```
 
 Demo
