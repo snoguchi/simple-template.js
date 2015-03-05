@@ -5,16 +5,13 @@ Minimal Javascript templating.
 Example
 -------
 ```javascript
-// uncomment the below line if use in node.js
-// var compileTemplate = require('simple-template-js');
-
 var text = '<ul><% data.forEach(function(i) { %><li><%=i%></li><% }); %></ul>';
 var data = ['sloth', 'bear', 'monkey'];
 var precompiledTemplate = compileTemplate(text);
 var result = precompiledTemplate(data);
 ```
 
-Setup
+Installation
 -----
 ```
 npm install simple-template-js

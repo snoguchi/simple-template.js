@@ -1,4 +1,4 @@
-function compileTemplate(s) {
+function compileTemplate(s, arg) {
   var code = 'var out = "";', token = s.split('%>');
   for (var i = 0, len = token.length; i < len; i++) {
     var tmp = token[i].split('<%');
@@ -16,7 +16,7 @@ function compileTemplate(s) {
     }
   }
   code += 'return out;';
-  return new Function("data", code);
+  return new Function(arg || 'data', code);
 }
 
 if (typeof module !== 'undefined') { module.exports = compileTemplate; }

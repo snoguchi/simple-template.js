@@ -9,4 +9,11 @@ compileTemplate = require('../simple-template.js');
   assert.strictEqual(result, expected);
 })();
 
+(function() {
+  var text = '<%=arg1%>/<%=arg2%>';
+  var expected = 'foo/bar';
+  var result = compileTemplate(text, 'arg1,arg2')('foo', 'bar');
+  assert.strictEqual(result, expected);
+})();
+
 console.log('ok');

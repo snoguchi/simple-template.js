@@ -1,6 +1,6 @@
 {
   "name": "simple-template-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./simple-template.js",
   "scripts": {
     "test": "node test/test.js"
